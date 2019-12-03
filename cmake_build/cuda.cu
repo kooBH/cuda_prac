@@ -8,7 +8,7 @@ __global__ void add(int *a, int *b, int *c)
 }
 
 
-int main(void) 
+int test(void) 
 {
     int a, b, c; 
     int *d_a, *d_b, *d_c; 
