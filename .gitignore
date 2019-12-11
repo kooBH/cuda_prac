@@ -14,3 +14,5 @@ CTestTestfile.cmake
 # insatll file
 *.deb
 *.pin.1
+
+build
