@@ -27,7 +27,7 @@ int test(void)
 
     cudaMemcpy(&c, d_c, sizeof(int), cudaMemcpyDeviceToHost);
 
-    printf("%d + %d = %d\n",a,b,c);
+    printf("ANS %d + %d = %d\n",a,b,c);
 
     cudaFree(d_a); cudaFree(d_b); cudaFree(d_c);
     return 0;
