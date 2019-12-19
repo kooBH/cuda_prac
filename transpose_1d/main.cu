@@ -58,6 +58,15 @@ int main(void)
     cudaMemcpy(h_b, d_b, memsize, cudaMemcpyDeviceToHost);
 
     print_cplx(h_b,N,M);
+/************************************************************/
+    cudaMemcpy(d_a, h_b, memsize, cudaMemcpyHostToDevice);
+
+    //Roll Back
+    transpose<<<N,M>>>(d_a,d_b,N,M);
+
+    cudaMemcpy(h_a, d_b, memsize, cudaMemcpyDeviceToHost);
+
+    print_cplx(h_a,M,N);
 
     free(h_a);free(h_b);free(h_c);
     cudaFree(d_a); cudaFree(d_b); cudaFree(d_c);
