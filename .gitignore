@@ -16,3 +16,4 @@ CTestTestfile.cmake
 *.pin.1
 
 build
+*.out
